@@ -1,0 +1,17 @@
+<link rel="import" href="/components/polymer/polymer.html">
+<polymer-element name="my-shadow-element">
+
+  <template>
+    <!-- everything in here is my-shadow-element's shadow DOM -->
+    <span>People say: <content></content></span>
+    <footer>sometimes</footer>
+  </template>
+
+  <script>
+
+    Polymer('my-shadow-element', {
+    });
+
+  </script>
+
+</polymer-element>

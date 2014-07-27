@@ -1,0 +1,41 @@
+<link rel="import" href="/components/core-menu/core-submenu.html">
+<link rel="import" href="/components/core-item/core-item.html">
+
+<polymer-element name="my-memu-element" attributes="new_label">
+
+  <template>
+    <style>    
+      :host {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      #core_menu {
+        font-size: 16px;
+        left: 240px;
+        top: 170px;
+        position: absolute;
+      }
+    </style>
+    <core-menu selected="0" selectedindex="0" id="core_menu">
+      <core-submenu active label="Topics" icon="settings" valueattr="name" id="core_submenu">
+        <core-item label="Topic 1" size="24" id="core_item" horizontal center layout></core-item>
+        <core-item label="Topic 2" size="24" id="core_item1" horizontal center layout></core-item>
+      </core-submenu>
+      <core-submenu label="{{new_label}}" icon="settings" valueattr="name" id="core_submenu1">
+        <core-item label="Favorite 1" size="24" id="core_item2" horizontal center layout></core-item>
+        <core-item label="Favorite 2" size="24" id="core_item3" horizontal center layout></core-item>
+        <core-item label="Favorite 3" size="24" id="core_item4" horizontal center layout></core-item>
+      </core-submenu>
+    </core-menu>
+  </template>
+
+  <script>
+
+    Polymer('my-menu-element', {
+    });
+
+  </script>
+
+</polymer-element>
